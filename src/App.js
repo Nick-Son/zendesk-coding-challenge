@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './assets/zendesk-medium-white.svg';
+import logo from './assets/zendesk-medium-algae.svg';
 import './styles/App.css';
 
 class App extends Component {
