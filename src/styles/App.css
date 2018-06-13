@@ -27,6 +27,11 @@
   width: 500px;
 }
 
-.App-intro {
-  font-size: large;
+.ticket-list {
+  border-radius: 3px;
+  border: 1px solid red;
+  color: #03363D;
+  background: white;
+  margin: 20px auto;
+  width: 600px;
 }

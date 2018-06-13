@@ -3,9 +3,18 @@ import logo from './assets/zendesk-medium-algae.svg';
 import './styles/App.css';
 import { getTickets } from './api/api'
 
+import TicketList from './components/TicketList'
+
 class App extends Component {
-  onGetTickets = () => {
+  state = {
+    tickets: null,
+    error: null,
+  }
+
+  componentDidMount() {
     getTickets()
+      .then(res => this.setState({ tickets: res}))
+      .catch(error => this.setState({ error }))
   }
 
   render() {
@@ -15,10 +24,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h3 className="App-title">Zendesk Ticket Viewer</h3>
         </header>
-        <p className="App-intro">
-          Display TicketList component
-        </p>
-        <button onClick={this.onGetTickets}>get tickets</button>
+          <TicketList tickets={this.state.tickets} />
       </div>
     );
   }
