@@ -48,7 +48,8 @@ https://developer.zendesk.com/rest_api/docs. You’ll find instructions on how t
 to the API and make requests for tickets.
 - We have also sent you a script you can run to populate your account with some data to
 use for testing.
-Gotchas:
+
+#### Gotchas:
 - Do Not Use ​Javascript in the browser (running on Node is fine). You won’t be able to
 successfully complete a GET request as we prevent cross-domain requests.
 - Remember that even though the response comes back as JSON format it is still just a

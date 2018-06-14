@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './assets/zendesk-medium-algae.svg';
 import './styles/App.css';
 import { getTickets } from './api/api'
 
+import Header from './components/Header'
 import TicketList from './components/TicketList'
 
 class App extends Component {
@@ -20,11 +20,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h3 className="App-title">Zendesk Ticket Viewer</h3>
-        </header>
-          <TicketList tickets={this.state.tickets} />
+        <Header />
+        {
+          this.state.error ? (
+            <p className="error">
+              Oops, there was an error: 
+              <span className="error__message"> {this.state.error.message}</span>
+            </p>
+          ) : (
+            <TicketList tickets={this.state.tickets} />
+          )
+        }
       </div>
     );
   }

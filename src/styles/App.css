@@ -6,12 +6,7 @@
   width: 100vw;
 }
 
-.App-logo {
-  display: block;
-  height: 50px;
-}
-
-.App-header {
+.header {
   /* background-color: #FDF4EA; */
   /* background-color: #FCCDBF; */
   background: linear-gradient(to right, #FDF4EA , #FCCDBF);
@@ -20,7 +15,12 @@
   padding: 5px;
 }
 
-.App-title {
+.header__logo {
+  display: block;
+  height: 50px;
+}
+
+.header__title {
   font-size: 1.5em;
   margin: 10px auto;
   padding-right: 100px;
@@ -34,4 +34,27 @@
   background: white;
   margin: 20px auto;
   width: 600px;
+}
+
+.ticket-list-item {
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.ticket-list-item__header {
+  background: cadetblue;
+}
+
+.error {
+  background: white;
+  border: 2px solid salmon;
+  border-radius: 5px;
+  width: 400px;
+  padding: 5px;
+  margin: 40px auto;
+}
+
+.error__message {
+  color: red;
 }
