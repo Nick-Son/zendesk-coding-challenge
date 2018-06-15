@@ -1,11 +1,12 @@
 import React from 'react'
 
 import TicketListItem from './TicketListItem'
+import PageSelector from './PageSelector'
 
 const TicketList = (props) => (
   <div className="ticket-list">
     <h3>Tickets</h3>
-    {console.log('props', props.tickets)}
+    <PageSelector />
     { !!props.tickets ?
       (
         props.tickets.map(ticket => (

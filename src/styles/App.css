@@ -58,3 +58,22 @@
 .error__message {
   color: red;
 }
+
+.page-selector {
+  border: 1px solid green;
+  margin: 5px auto;
+  width: 400px;
+}
+
+.page-selector__list {
+  /* list-style-type: none; */
+  margin: 5px auto;
+}
+
+.page-selector__link {
+  border: 1px solid blue;
+  padding: 2px;
+  display: inline;
+  user-select: none;
+  cursor: pointer;
+}
