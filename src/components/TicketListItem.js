@@ -1,12 +1,14 @@
 import React from 'react'
 
+import { formatDate } from '../helpers/formatDate'
+
 const TicketListItem = (props) => (
   <div className="ticket-list-item">
     <div className="ticket-list-item__header">
-      <p>{props.ticket.subject} - {props.ticket.id}</p>
+      <p>{props.ticket.subject} - ID: {props.ticket.id}</p>
     </div>
     <div>
-      <p>{props.ticket.created_at} - {props.ticket.status}</p>
+      <p>{formatDate(props.ticket.created_at)} - Status: {props.ticket.status}</p>
     </div>
   </div>
 )
