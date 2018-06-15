@@ -60,20 +60,36 @@
 }
 
 .page-selector {
-  border: 1px solid green;
+  border: 1px solid cadetblue;
   margin: 5px auto;
   width: 400px;
 }
 
 .page-selector__list {
-  /* list-style-type: none; */
-  margin: 5px auto;
+  border: 1px solid green;
+  width: 200px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  overflow: hidden;
+  padding: 5px;
 }
 
 .page-selector__link {
   border: 1px solid blue;
-  padding: 2px;
-  display: inline;
+  padding: 5px;
+  /* margin: 2px; */
   user-select: none;
   cursor: pointer;
+}
+
+.page-selector__link:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.page-selector__link:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

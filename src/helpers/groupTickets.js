@@ -1,4 +1,4 @@
-export const ticketGrouper = (tickets, groupSize) => {
+export const groupTickets = (tickets, groupSize) => {
   let groupedTickets = []
   let currentGroup = []
 
@@ -11,7 +11,7 @@ export const ticketGrouper = (tickets, groupSize) => {
       currentGroup = []
     }
     // push current item to current group
-    currentGroup.push(item)
+    return currentGroup.push(item)
   })
   // any left over items that didn't make a 'full' group, push to groupedTickets
   groupedTickets.push(currentGroup)

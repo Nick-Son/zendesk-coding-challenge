@@ -6,14 +6,18 @@ import ErrorMessage from './components/ErrorMessage'
 import Header from './components/Header'
 import TicketList from './components/TicketList'
 
-import { ticketGrouper } from './helpers/ticketGrouper'
+import { groupTickets } from './helpers/groupTickets'
 
 class App extends Component {
   state = {
     tickets: null,
     error: null,
-    currentPage: 1,
+    currentPage: 0,
     ticketsPerPage: 20
+  }
+
+  onChangePage = (number) => {
+    this.setState({ currentPage: number})
   }
 
   componentDidMount() {
@@ -24,8 +28,8 @@ class App extends Component {
 
   render() {
     const { tickets, ticketsPerPage, error, currentPage } = this.state
-    let groupedTickets = tickets ? ticketGrouper(tickets, ticketsPerPage) : null
-    console.log('grouped tickets: ', groupedTickets)
+    const groupedTickets = tickets && groupTickets(tickets, ticketsPerPage)
+    const pageNumbers = groupedTickets && groupedTickets.map((group, index) => index )
 
     return (
       <div className="App">
@@ -34,7 +38,13 @@ class App extends Component {
           error ? (
             <ErrorMessage error={error} />
           ) : (
-            <TicketList tickets={groupedTickets ? groupedTickets[currentPage] : null} />
+            <TicketList 
+              tickets={groupedTickets ? groupedTickets[currentPage] : null} 
+              ticketCount={tickets && tickets.length}
+              ticketsPerPage={groupedTickets ? groupedTickets[currentPage].length : null}
+              onChangePage={this.onChangePage}  
+              pageNumbers={pageNumbers}
+            />
           )
         }
       </div>

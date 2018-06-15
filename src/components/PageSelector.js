@@ -1,11 +1,21 @@
 import React from 'react'
 
-const PageSelector = () => (
+const PageSelector = (props) => (
   <div className="page-selector">
     <ul className="page-selector__list">
-      <li className="page-selector__link">page 1</li>
-      <li className="page-selector__link">page 2</li>
-      <li className="page-selector__link">page 3</li>
+      { props.pageNumbers &&
+        props.pageNumbers.map(page => (
+          (
+            <li 
+              className="page-selector__link"
+              key={page} 
+              id={page} 
+              onClick={() => props.onChangePage(page)}
+              >{page + 1}
+            </li>
+          )
+        ))
+      }
     </ul>
   </div>
 )

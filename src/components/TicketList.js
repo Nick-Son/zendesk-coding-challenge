@@ -5,16 +5,13 @@ import PageSelector from './PageSelector'
 
 const TicketList = (props) => (
   <div className="ticket-list">
-    <h3>Tickets</h3>
-    <PageSelector />
-    { !!props.tickets ?
-      (
-        props.tickets.map(ticket => (
-          <TicketListItem key={ticket.id} ticket={ticket} />
-        ))
-      ) : (
-        <p>loading</p>
-      )
+    <h3>Viewing {props.ticketsPerPage} Tickets of {props.ticketCount}</h3>
+    <PageSelector 
+      onChangePage={props.onChangePage}
+      pageNumbers={props.pageNumbers}
+    />
+    {props.tickets &&
+        props.tickets.map(ticket => <TicketListItem key={ticket.id} ticket={ticket} />)
     }
   </div>
 )
