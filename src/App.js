@@ -5,6 +5,7 @@ import './styles/App.css';
 import ErrorMessage from './components/ErrorMessage'
 import Header from './components/Header'
 import TicketList from './components/TicketList'
+import TicketModal from './components/TicketModal'
 
 import { groupTickets } from './helpers/groupTickets'
 
@@ -13,11 +14,21 @@ class App extends Component {
     tickets: null,
     error: null,
     currentPage: 0,
-    ticketsPerPage: 20
+    ticketsPerPage: 20,
+    selectedTicket: undefined
   }
 
   onPageChange = (number) => {
     this.setState({ currentPage: number})
+  }
+
+  onSelectTicket = (id) => {
+    const selectedTicket = this.state.tickets.filter(ticket => ticket.id === id)
+    this.setState({ selectedTicket: selectedTicket})
+  }
+
+  onClearSelectedTicket = () => {
+    this.setState({ selectedTicket: undefined})
   }
 
   componentDidMount() {
@@ -27,7 +38,7 @@ class App extends Component {
   }
 
   render() {
-    const { tickets, ticketsPerPage, error, currentPage } = this.state
+    const { tickets, ticketsPerPage, error, currentPage, selectedTicket } = this.state
     const groupedTickets = tickets && groupTickets(tickets, ticketsPerPage)
     const pageNumbers = groupedTickets && groupedTickets.map((group, index) => index )
 
@@ -38,13 +49,20 @@ class App extends Component {
           error ? (
             <ErrorMessage error={error} />
           ) : (
-            <TicketList 
-              tickets={groupedTickets ? groupedTickets[currentPage] : null} 
-              ticketCount={tickets && tickets.length}
-              ticketsPerPage={groupedTickets ? groupedTickets[currentPage].length : null}
-              onPageChange={this.onPageChange}  
-              pageNumbers={pageNumbers}
-            />
+            <div>
+              <TicketList 
+                tickets={groupedTickets ? groupedTickets[currentPage] : null} 
+                ticketCount={tickets && tickets.length}
+                ticketsPerPage={groupedTickets ? groupedTickets[currentPage].length : null}
+                onPageChange={this.onPageChange}  
+                pageNumbers={pageNumbers}
+                onSelectTicket={this.onSelectTicket}
+              />
+              <TicketModal 
+                selectedTicket={selectedTicket}
+                onClearSelectedTicket={this.onClearSelectedTicket}
+              />
+            </div>
           )
         }
       </div>

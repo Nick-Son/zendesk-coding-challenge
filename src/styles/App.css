@@ -116,3 +116,40 @@
   border-bottom-right-radius: 10px;
 }
 
+/* Modal */
+.modal {
+  background: white;
+  border-radius: 10px;
+  width: 600px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.button {
+  background: #FCCDBF;
+  border: none;
+  padding: 10px;
+  font-weight: 400;
+  border-radius: 10px;
+  margin: 0 auto;
+}

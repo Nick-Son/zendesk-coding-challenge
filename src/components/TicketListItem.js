@@ -3,7 +3,7 @@ import React from 'react'
 import { formatDate } from '../helpers/formatDate'
 
 const TicketListItem = (props) => (
-  <div className="ticket-list-item">
+  <div className="ticket-list-item" onClick={() => props.onSelectTicket(props.ticket.id)}>
     <div className="ticket-list-item__header">
       <p>
         <span className="subject">{props.ticket.subject}</span> 

@@ -11,7 +11,7 @@ const TicketList = (props) => (
       pageNumbers={props.pageNumbers}
     />
     {props.tickets &&
-        props.tickets.map(ticket => <TicketListItem key={ticket.id} ticket={ticket} />)
+        props.tickets.map(ticket => <TicketListItem key={ticket.id} ticket={ticket} onSelectTicket={props.onSelectTicket} />)
     }
   </div>
 )
