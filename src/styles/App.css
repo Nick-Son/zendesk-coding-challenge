@@ -40,6 +40,7 @@
   border: 1px solid red;
   border-radius: 5px;
   margin: 3px;
+  height: 80px;
 }
 
 .ticket-list-item__header {
@@ -92,4 +93,15 @@
 .page-selector__link:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.date {
+  color: grey;
+  float: left;
+  padding-left: 5px;
+}
+
+.status {
+  float: right;
+  padding-right: 5px;
 }

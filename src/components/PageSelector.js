@@ -10,7 +10,7 @@ const PageSelector = (props) => (
               className="page-selector__link"
               key={page} 
               id={page} 
-              onClick={() => props.onChangePage(page)}
+              onClick={() => props.onPageChange(page)}
               >{page + 1}
             </li>
           )

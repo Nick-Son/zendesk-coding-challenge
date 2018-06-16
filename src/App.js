@@ -16,7 +16,7 @@ class App extends Component {
     ticketsPerPage: 20
   }
 
-  onChangePage = (number) => {
+  onPageChange = (number) => {
     this.setState({ currentPage: number})
   }
 
@@ -42,7 +42,7 @@ class App extends Component {
               tickets={groupedTickets ? groupedTickets[currentPage] : null} 
               ticketCount={tickets && tickets.length}
               ticketsPerPage={groupedTickets ? groupedTickets[currentPage].length : null}
-              onChangePage={this.onChangePage}  
+              onPageChange={this.onPageChange}  
               pageNumbers={pageNumbers}
             />
           )

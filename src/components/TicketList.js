@@ -7,7 +7,7 @@ const TicketList = (props) => (
   <div className="ticket-list">
     <h3>Viewing {props.ticketsPerPage} Tickets of {props.ticketCount}</h3>
     <PageSelector 
-      onChangePage={props.onChangePage}
+      onPageChange={props.onPageChange}
       pageNumbers={props.pageNumbers}
     />
     {props.tickets &&
