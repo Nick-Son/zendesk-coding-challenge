@@ -39,12 +39,34 @@
 .ticket-list-item {
   border: 1px solid red;
   border-radius: 5px;
+  cursor: pointer;
   margin: 3px;
-  height: 80px;
+}
+
+.ticket-list-item:hover {
+  background: lightblue;
+  transition: .9s;
 }
 
 .ticket-list-item__header {
-  background: cadetblue;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.ticket-list-item__description {
+  padding: 3px;
+  margin: 15px;
+  border: 0.5px dotted lightgray;
+  border-radius: 10px;
+}
+
+.date {
+  color: grey;
+}
+
+.right {
+  float: right;
+  padding-right: 10px;
 }
 
 .error {
@@ -80,7 +102,6 @@
 .page-selector__link {
   border: 1px solid blue;
   padding: 5px;
-  /* margin: 2px; */
   user-select: none;
   cursor: pointer;
 }
@@ -95,13 +116,3 @@
   border-bottom-right-radius: 10px;
 }
 
-.date {
-  color: grey;
-  float: left;
-  padding-left: 5px;
-}
-
-.status {
-  float: right;
-  padding-right: 5px;
-}

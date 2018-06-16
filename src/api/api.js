@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:7001'
+  baseURL: 'http://localhost:7000'
 })
 
 export function getTickets() {
@@ -9,5 +9,8 @@ export function getTickets() {
     .then((res) => {
       console.log(res.data)
       return res.data
+    })
+    .catch((error) => {
+      console.log(error)
     })
 }
