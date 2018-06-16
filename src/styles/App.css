@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-image: url("../assets/bg.png");
-  background-size: cover;
+  /* background-image: url("../assets/bg.png"); */
+  /* background-size: cover; */
   height: 100vh;
   width: 100vw;
 }
@@ -28,23 +28,25 @@
 }
 
 .ticket-list {
-  border-radius: 3px;
-  border: 1px solid red;
+  border-radius: 10px;
+  /* border: 1px solid red; */
   color: #03363D;
   background: white;
   margin: 20px auto;
+  padding: 10px;
   width: 600px;
+  box-shadow: 0px 3px 15px rgba(33, 47, 128, 0.2);
 }
 
 .ticket-list-item {
-  border: 1px solid red;
+  border: 1px solid lightgray;
   border-radius: 5px;
   cursor: pointer;
-  margin: 3px;
+  margin: 5px;
 }
 
 .ticket-list-item:hover {
-  background: lightblue;
+  background: #FDF4EA;
   transition: .9s;
 }
 
@@ -53,15 +55,13 @@
   padding-left: 10px;
 }
 
-.ticket-list-item__description {
-  padding: 3px;
-  margin: 15px;
-  border: 0.5px dotted lightgray;
-  border-radius: 10px;
-}
-
 .date {
   color: grey;
+}
+
+.text-left {
+  text-align: left;
+  padding-left: 10px;
 }
 
 .right {
@@ -83,14 +83,7 @@
 }
 
 .page-selector {
-  border: 1px solid cadetblue;
-  margin: 5px auto;
-  width: 400px;
-}
-
-.page-selector__list {
-  border: 1px solid green;
-  width: 200px;
+  max-width: 500px;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -100,10 +93,20 @@
 }
 
 .page-selector__link {
-  border: 1px solid blue;
-  padding: 5px;
+  border: .5px solid grey;
+  padding: 10px;
   user-select: none;
   cursor: pointer;
+}
+
+.current-page {
+  background: #FCCDBF;
+  color: white;
+}
+
+.page-selector__link:hover {
+  background: #FDF4EA;
+  color: white;
 }
 
 .page-selector__link:first-child {
@@ -119,11 +122,13 @@
 /* Modal */
 .modal {
   background: white;
+  border: .5px dotted lightgray;
   border-radius: 10px;
   width: 600px;
   outline: none;
   padding: 10px;
   text-align: center;
+  margin-top: -200px;
 }
 
 .ReactModalPortal > div {
@@ -153,3 +158,16 @@
   border-radius: 10px;
   margin: 0 auto;
 }
+
+.dotted-line {
+  border-bottom: .5px solid lightgray;
+  padding-bottom: 10px;
+}
+
+.ticket-modal__description {
+  padding: 15px;
+  text-align: left;
+  margin: 10px;
+  border-bottom: 0.5px dotted lightgray;
+}
+

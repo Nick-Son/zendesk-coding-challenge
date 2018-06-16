@@ -10,9 +10,6 @@ const TicketListItem = (props) => (
         <span className="right"> ID: {props.ticket.id}</span>
       </p> 
     </div>
-    <div className="ticket-list-item__description" hidden={true}>
-      <p>{props.ticket.description}</p>
-    </div>
     <div className="ticket-list-item__header">
       <p>
         <span className="date">{formatDate(props.ticket.created_at)}</span> 

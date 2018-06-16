@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     const { tickets, ticketsPerPage, error, currentPage, selectedTicket } = this.state
     const groupedTickets = tickets && groupTickets(tickets, ticketsPerPage)
-    const pageNumbers = groupedTickets && groupedTickets.map((group, index) => index )
+    const pageNumbers = groupedTickets && groupedTickets.map((group, index) => index)
 
     return (
       <div className="App">
@@ -54,6 +54,7 @@ class App extends Component {
                 tickets={groupedTickets ? groupedTickets[currentPage] : null} 
                 ticketCount={tickets && tickets.length}
                 ticketsPerPage={groupedTickets ? groupedTickets[currentPage].length : null}
+                currentPage={currentPage}
                 onPageChange={this.onPageChange}  
                 pageNumbers={pageNumbers}
                 onSelectTicket={this.onSelectTicket}

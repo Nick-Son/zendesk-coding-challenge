@@ -8,16 +8,20 @@ const TicketModal = (props) => (
     isOpen={!!props.selectedTicket}
     contentLabel="Ticket Details"
     onRequestClose={props.onClearSelectedTicket}
-    // closeTimeoutMS={100}
+    // closeTimeoutMS={200}
     className="modal"
   >
-  {props.selectedTicket && 
-    <div>
-      <h4>{props.selectedTicket[0].subject}</h4>
-        <p>Requester: {props.selectedTicket[0].requester_id}</p>
-        <p>{props.selectedTicket[0].description}</p> 
-        <p>Status: {props.selectedTicket[0].status}</p>
-        <p>Created: {formatDate(props.selectedTicket[0].created_at)}</p>
+    {props.selectedTicket && 
+      <div>
+      <p className="text-left dotted-line">Requester: {props.selectedTicket[0].requester_id}</p>
+        <h4>{props.selectedTicket[0].subject}</h4>
+        <p className="ticket-modal__description">{props.selectedTicket[0].description}</p> 
+        <div className="ticket-list-item__header">
+          <p>
+            <span className="date">{formatDate(props.selectedTicket[0].created_at)}</span> 
+            <span className="right"> Status: {props.selectedTicket[0].status}</span>
+          </p>
+        </div>
       </div>
     }
     <button className="button" onClick={props.onClearSelectedTicket}>close</button>
