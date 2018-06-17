@@ -7,10 +7,9 @@ const api = axios.create({
 export function getTickets() {
   return api.get('/')
     .then((res) => {
-      console.log(res.data)
       return res.data
     })
     .catch((error) => {
-      console.log(error)
+      alert(`${error}. Unable to Connect to server, check that the server is running and refresh the page`)
     })
 }

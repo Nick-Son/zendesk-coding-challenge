@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getTickets } from './api/api'
+import { groupTickets } from './helpers/groupTickets'
 import './styles/App.css';
 
 import ErrorMessage from './components/ErrorMessage'
@@ -7,8 +8,6 @@ import Header from './components/Header'
 import TicketList from './components/TicketList'
 import TicketModal from './components/TicketModal'
 import loader from './assets/loader.svg'
-
-import { groupTickets } from './helpers/groupTickets'
 
 class App extends Component {
   state = {
