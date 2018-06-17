@@ -6,6 +6,7 @@ import ErrorMessage from './components/ErrorMessage'
 import Header from './components/Header'
 import TicketList from './components/TicketList'
 import TicketModal from './components/TicketModal'
+import loader from './assets/loader.svg'
 
 import { groupTickets } from './helpers/groupTickets'
 
@@ -50,15 +51,21 @@ class App extends Component {
             <ErrorMessage error={error} />
           ) : (
             <div>
-              <TicketList 
-                tickets={groupedTickets ? groupedTickets[currentPage] : null} 
-                ticketCount={tickets && tickets.length}
-                ticketsPerPage={groupedTickets ? groupedTickets[currentPage].length : null}
-                currentPage={currentPage}
-                onPageChange={this.onPageChange}  
-                pageNumbers={pageNumbers}
-                onSelectTicket={this.onSelectTicket}
-              />
+              {
+                tickets ? (
+                  <TicketList 
+                    tickets={groupedTickets ? groupedTickets[currentPage] : null} 
+                    ticketCount={tickets && tickets.length}
+                    ticketsPerPage={groupedTickets ? groupedTickets[currentPage].length : null}
+                    currentPage={currentPage}
+                    onPageChange={this.onPageChange}  
+                    pageNumbers={pageNumbers}
+                    onSelectTicket={this.onSelectTicket}
+                  />
+                ) : (
+                  <img className="loader" src={loader} alt="loading"/>
+                )
+              }
               <TicketModal 
                 selectedTicket={selectedTicket}
                 onClearSelectedTicket={this.onClearSelectedTicket}
