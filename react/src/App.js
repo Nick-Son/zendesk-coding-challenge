@@ -14,7 +14,7 @@ class App extends Component {
     tickets: null,
     error: null,
     currentPage: 0,
-    ticketsPerPage: 20,
+    ticketsPerPage: 25,
     selectedTicket: undefined
   }
 

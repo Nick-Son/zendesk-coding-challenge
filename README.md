@@ -1,21 +1,47 @@
 # Zendesk Coding Challenge
+A Node server, serving ticket data from the Zendesk API, serving it to a React front end.
 
-## Installation
-1. Clone the repo to your local machine
-2. cd into the `/react` folder, run either `yarn install` or `npm install`
-3. cd into the `/server` folder and, as above run either `yarn install` or `npm install`
-4. To start the server, in the terminal, run `node server.js` from the `/server` directory. You should see a console message saying that the server is running on `localhost:7000`
-5. From the `/react` directory run either `yarn start` or `npm start`. This should start the react dev server on an available port (most likely `localhost:3000`)
-6. In the browser of your choice (even if it's IE) navigate to `http://localhost:3000/`
-7. Enjoy some tickets.
+## Installation & Usage
 
 #### Requirements
 - Node
 - Git
 
+### Step 1: Setting up the project locally
+
+1. Clone the repo to your local machine
+2. From the root of the project, cd into the `/react` folder, run either `yarn install` or `npm install`
+3. From the root of the project, cd into the `/server` folder and, as above run either `yarn install` or `npm install`
+
+### Step 2: Starting the backend server
+4. To start the server, in the terminal, run `node server.js` from the `/server` directory. You should see a console message saying that the server is running on `localhost:7000`
+
+### Step 3: Start the Front end server
+5. From the `/react` directory run either `yarn start` or `npm start`. This should start the react dev server on an available port (most likely `localhost:3000`)
+
+### Step 4: Starting the app
+6. In the browser of your choice (even if it's IE) navigate to `http://localhost:3000/`
+7. Enjoy some tickets.
+
+## Usage
+After navigating to localhost:3000 (or whatever port is used), the app will send a GET request to the baackend, sending a GET request to the API, retrieving and sending back ticket data. This data will be populated in a Ticket List, ordered by acsending order based on ID. 
+
+Clicking a ticket will display additional information in a modal. To close the modal, the user can use the close button, click the background or press the escape key.
+
+The tickets are paginated, showing 25 tickets per page, with a pagination bar at both the top and bottom of the Ticket List.
+
 #### Running Tests
 
 To test the React code, cd into the `/react` directory, and run either `yarn test` or `npm test`
+
+### considerations
+
+### Future development
+- Making the app mobile responsive
+- Adding Redux to make it more scalable for future features
+- Adding scss to the app, converting and seperating the existing css
+- Reworking the pagination code to limit the visible page tabs if the needed amount pages required exceed a given amount, adding 'next' and 'previous' buttons. 
+- Improve error handling.
 
 ---
 
