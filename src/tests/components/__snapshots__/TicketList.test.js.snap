@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render TicketList correctly with props 1`] = `
+<div
+  className="ticket-list"
+>
+  <h3>
+    Viewing 
+    10
+     Tickets of 
+    10
+  </h3>
+  <PageSelector />
+  <TicketListItem
+    key="1"
+    ticket={
+      Object {
+        "description": "Ticket 1",
+        "id": 1,
+      }
+    }
+  />
+  <TicketListItem
+    key="2"
+    ticket={
+      Object {
+        "description": "Ticket 2",
+        "id": 2,
+      }
+    }
+  />
+  <TicketListItem
+    key="3"
+    ticket={
+      Object {
+        "description": "Ticket 3",
+        "id": 3,
+      }
+    }
+  />
+  <TicketListItem
+    key="4"
+    ticket={
+      Object {
+        "description": "Ticket 4",
+        "id": 4,
+      }
+    }
+  />
+  <TicketListItem
+    key="5"
+    ticket={
+      Object {
+        "description": "Ticket 5",
+        "id": 5,
+      }
+    }
+  />
+  <TicketListItem
+    key="6"
+    ticket={
+      Object {
+        "description": "Ticket 6",
+        "id": 6,
+      }
+    }
+  />
+  <TicketListItem
+    key="7"
+    ticket={
+      Object {
+        "description": "Ticket 7",
+        "id": 7,
+      }
+    }
+  />
+  <TicketListItem
+    key="8"
+    ticket={
+      Object {
+        "description": "Ticket 8",
+        "id": 8,
+      }
+    }
+  />
+  <TicketListItem
+    key="9"
+    ticket={
+      Object {
+        "description": "Ticket 9",
+        "id": 9,
+      }
+    }
+  />
+  <TicketListItem
+    key="10"
+    ticket={
+      Object {
+        "description": "Ticket 10",
+        "id": 10,
+      }
+    }
+  />
+  <PageSelector />
+</div>
+`;

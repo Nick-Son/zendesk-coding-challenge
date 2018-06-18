@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render App correctly 1`] = `
+<div
+  className="App"
+>
+  <Header />
+  <div>
+    <img
+      alt="loading"
+      className="loader"
+      src="loader.svg"
+    />
+    <TicketModal
+      onClearSelectedTicket={[Function]}
+    />
+  </div>
+</div>
+`;

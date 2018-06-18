@@ -1,9 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import Header from '../../components/Header';
 
-it('App component renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Header />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+Enzyme.configure({
+  adapter: new Adapter()
+})
+
+test('Should render Header correctly', () => {
+  const wrapper = shallow(<Header />)
+  expect(wrapper).toMatchSnapshot()
+})
+
+test('Should render Header title correctly', () => {
+  const wrapper = shallow(<Header />)
+  expect(wrapper.find('h3').length).toBe(1)
+})
+
+test('Should render Header logo correctly', () => {
+  const wrapper = shallow(<Header />)
+  expect(wrapper.find('img').length).toBe(1)
+})
