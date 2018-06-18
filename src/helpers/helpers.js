@@ -1,3 +1,10 @@
+// Helper Functions
+
+export const formatDate = (date) => {
+  const formattedDate = new Date(date)
+  return formattedDate.toDateString()
+}
+
 export const groupTickets = (tickets, groupSize) => {
   let groupedTickets = []
   let currentGroup = []

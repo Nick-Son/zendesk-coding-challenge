@@ -1,14 +1,14 @@
 import React from 'react'
 import Modal from 'react-modal'
 
-import { formatDate } from '../helpers/formatDate'
+import { formatDate } from '../helpers/helpers'
 
 const TicketModal = (props) => (
   <Modal
     isOpen={!!props.selectedTicket}
     contentLabel="Ticket Details"
     onRequestClose={props.onClearSelectedTicket}
-    // closeTimeoutMS={200}
+    closeTimeoutMS={200}
     className="modal"
   >
     {props.selectedTicket && 

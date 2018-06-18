@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getTickets } from './api/api'
-import { groupTickets } from './helpers/groupTickets'
+import { groupTickets } from './helpers/helpers'
 import './styles/App.css';
 
 import ErrorMessage from './components/ErrorMessage'
@@ -33,7 +33,17 @@ class App extends Component {
 
   componentDidMount() {
     getTickets()
-      .then(res => this.setState({ tickets: res}))
+      .then(res => {
+        if(res === 401) {
+          this.setState({error: {message: "Couldn't Authenticate You"}})
+        } else if (res === 404) {
+          this.setState({error: {message: "API endpoint not found"}})
+        } else if (res === 'Network Error') {
+          this.setState({error: {message: "Network Error, check that the server is running and refresh the page"}})
+        } else {
+          this.setState({ tickets: res})
+        }
+      })
       .catch(error => this.setState({ error }))
   }
 

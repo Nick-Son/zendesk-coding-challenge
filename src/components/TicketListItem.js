@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { formatDate } from '../helpers/formatDate'
+import { formatDate } from '../helpers/helpers'
 
 const TicketListItem = (props) => (
   <div className="ticket-list-item" onClick={() => props.onSelectTicket(props.ticket.id)}>

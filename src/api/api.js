@@ -10,6 +10,6 @@ export function getTickets() {
       return res.data
     })
     .catch((error) => {
-      alert(`${error}. Unable to Connect to server, check that the server is running and refresh the page`)
+      return error.message
     })
 }
