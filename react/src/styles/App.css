@@ -6,7 +6,6 @@
 
 .header {
   background: linear-gradient(to right, #FDF4EA , #FCCDBF);
-  /* background: white; */
   color: #03363D;
   display: flex;
   padding: 5px;
@@ -22,13 +21,12 @@
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px auto;
   padding-top: 5px;
-  padding-right: 100px;
+  padding-left: 50px;
   width: 500px;
 }
 
 .ticket-list {
   border-radius: 10px;
-  /* border: 1px solid red; */
   color: #03363D;
   background: white;
   margin: 20px auto;

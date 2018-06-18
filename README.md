@@ -24,7 +24,7 @@ A Node server, serving ticket data from the Zendesk API, serving it to a React f
 7. Enjoy some tickets.
 
 ## Usage
-After navigating to localhost:3000 (or whatever port is used), the app will send a GET request to the baackend, sending a GET request to the API, retrieving and sending back ticket data. This data will be populated in a Ticket List, ordered by acsending order based on ID. 
+After navigating to localhost:3000 (or whatever port is used), the app will send a GET request to the backend, sending a GET request to the API, retrieving and sending back ticket data. This data will be populated in a Ticket List, in acsending order, based on ID. 
 
 Clicking a ticket will display additional information in a modal. To close the modal, the user can use the close button, click the background or press the escape key.
 
@@ -34,14 +34,15 @@ The tickets are paginated, showing 25 tickets per page, with a pagination bar at
 
 To test the React code, cd into the `/react` directory, and run either `yarn test` or `npm test`
 
-### considerations
+### Code/App Design
+
 
 ### Future development
 - Making the app mobile responsive
 - Adding Redux to make it more scalable for future features
 - Adding scss to the app, converting and seperating the existing css
 - Reworking the pagination code to limit the visible page tabs if the needed amount pages required exceed a given amount, adding 'next' and 'previous' buttons. 
-- Improve error handling.
+- Improve error handling. Also improve error messages/component
 
 ---
 
