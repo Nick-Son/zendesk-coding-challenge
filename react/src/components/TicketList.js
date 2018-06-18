@@ -5,7 +5,7 @@ import PageSelector from './PageSelector'
 
 const TicketList = (props) => (
   <div className="ticket-list">
-    <h3>Viewing {props.ticketsPerPage} Tickets of {props.ticketCount}</h3>
+    <h3 className="ticket-list__title">Viewing {props.ticketsPerPage} Tickets of {props.ticketCount}</h3>
     <PageSelector 
       currentPage={props.currentPage}
       onPageChange={props.onPageChange}

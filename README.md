@@ -9,7 +9,7 @@ A Node server, serving ticket data from the Zendesk API, serving it to a React f
 
 ### Step 1: Setting up the project locally
 
-1. Clone the repo to your local machine
+1. Clone the repo to your local machine, or, alternatively, download the project as a zip file and extract it to your local machine.
 2. From the root of the project, cd into the `/react` folder, run either `yarn install` or `npm install`
 3. From the root of the project, cd into the `/server` folder and, as above run either `yarn install` or `npm install`
 
@@ -43,12 +43,13 @@ The basic idead was to have a backend that would request the data from the Zende
 I chose to build a simple front end with React. As the app is, at this stage, quite simple, I didn't feel the need to use Redux for state management, but is something I would definitely add in the future, if the app was to grow. This is also my reasoning for using default CSS instead of something more scalable like scss or sass. I decided to use a modal to show extra details of a chosen ticket to again, keep the project simple, removing the possible need to use react-router. Also, as it was just to display extra data, and not perform extra actions (eg. creating/editing tickets) I thought a modal would suffice, while also, allowing a user to view multiple tickets in succession with ease. 
 
 ### Future development
-- Making the app mobile responsive
-- Adding Redux to make it more scalable for future features
-- Adding scss to the app, converting and seperating the existing css
+- Making the app mobile responsive.
+- Finish styling the app.
+- Adding Redux to make it more scalable for future features.
+- Adding scss to the app, converting and seperating the existing css.
 - Reworking the pagination code to limit the visible page tabs if the needed amount pages required exceed a given amount, adding 'next' and 'previous' buttons. 
-- Improve error handling. Also improve error messages/component
-
+- Improve error handling. Also improve error messages/component.
+- Add greater detail to the documentation.
 ---
 
 ## Challenge Brief
