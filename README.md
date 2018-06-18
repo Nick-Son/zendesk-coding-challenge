@@ -1,6 +1,25 @@
 # Zendesk Coding Challenge
 
-### Intern Coding Challenge
+## Installation
+1. Clone the repo to your local machine
+2. cd into the `/react` folder, run either `yarn install` or `npm install`
+3. cd into the `/server` folder and, as above run either `yarn install` or `npm install`
+4. To start the server, in the terminal, run `node server.js` from the `/server` directory. You should see a console message saying that the server is running on `localhost:7000`
+5. From the `/react` directory run either `yarn start` or `npm start`. This should start the react dev server on an available port (most likely `localhost:3000`)
+6. In the browser of your choice (even if it's IE) navigate to `http://localhost:3000/`
+7. Enjoy some tickets.
+
+#### Requirements
+- Node
+- Git
+
+#### Running Tests
+
+To test the React code, cd into the `/react` directory, and run either `yarn test` or `npm test`
+
+---
+
+## Challenge Brief
 
 #### Zendesk Ticket Viewer
 
@@ -57,6 +76,3 @@ string and needs to be parsed to be of any use to you.
 - Use basic authentication, see
 https://developer.zendesk.com/rest_api/docs/core/introduction#basic-authentication
 
-### Installation
-
-### Scripts
