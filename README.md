@@ -32,10 +32,15 @@ The tickets are paginated, showing 25 tickets per page, with a pagination bar at
 
 #### Running Tests
 
-To test the React code, cd into the `/react` directory, and run either `yarn test` or `npm test`
+To run the tests for the React code, cd into the `/react` directory, and run either `yarn test` or `npm test`
 
-### Code/App Design
+## Code/App Design
 
+#### Back End (Node + Express)
+The basic idead was to have a backend that would request the data from the Zendesk API, then send it to a React front end. This was necessary as cross-domain requests are prevented. The HTTP client I decided to use was Axios which can work on both client and server. It also, by default, parses JSON data.
+
+#### Front End (React)
+I chose to build a simple front end with React. As the app is, at this stage, quite simple, I didn't feel the need to use Redux for state management, but is something I would definitely add in the future, if the app was to grow. This is also my reasoning for using default CSS instead of something more scalable like scss or sass. I decided to use a modal to show extra details of a chosen ticket to again, keep the project simple, removing the possible need to use react-router. Also, as it was just to display extra data, and not perform extra actions (eg. creating/editing tickets) I thought a modal would suffice, while also, allowing a user to view multiple tickets in succession with ease. 
 
 ### Future development
 - Making the app mobile responsive
