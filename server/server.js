@@ -10,8 +10,8 @@ server.use(cors())
 
 // Axios configuration
 const api = axios.create({
-  baseURL: 'https://nickson.zendesk.com/api/v2',
-  headers: { Authorization: 'Basic bmlja3Nvbm5lckBnbWFpbC5jb206WkRlcmdvc3VtNyM=' },
+  baseURL: 'https://nson.zendesk.com/api/v2',
+  headers: { Authorization: 'Basic {password/token:api_token - base64 encoded}' },
   responseType: 'json',
   responseEncoding: 'utf8'
 })
