@@ -1,9 +1,9 @@
 # Zendesk Coding Challenge
 A Node server, serving ticket data from the Zendesk API, serving it to a React front end.
 
-<img src="./docs/main-01.png" width="800">
+![](/docs/main-01.png)
 
-<img src="./docs/main-02.png" width="800">
+![](/docs/main-02.png)
 
 ## Installation & Usage
 
